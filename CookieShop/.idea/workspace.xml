@@ -7,16 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3847e6c7-9242-49bb-ad13-6faff34ce164" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CookieShop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CookieShop_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CookieShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreenShop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/WEB-INF/classes/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/WEB-INF/classes/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GoodsSearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/c3p0-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,8 +31,8 @@
         <entry file="file://$PROJECT_DIR$/../README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="34">
-                <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+              <first_editor>
+                <caret selection-end-line="2" selection-end-column="41" />
               </first_editor>
               <second_editor />
             </state>
@@ -216,7 +206,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="21" />
     <option name="width" value="1440" />
     <option name="height" value="820" />
@@ -233,11 +223,6 @@
             <path>
               <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
@@ -261,7 +246,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551786943597" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551787277047" />
     <property name="last_opened_file_path" value="D:/maven/apache-maven-3.6.0/conf/settings.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -444,15 +429,15 @@
       <workItem from="1551772641140" duration="3074000" />
       <workItem from="1551776811009" duration="665000" />
       <workItem from="1551785391994" duration="842000" />
-      <workItem from="1551786259156" duration="574000" />
+      <workItem from="1551786259156" duration="858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97248000" />
+    <option name="totallyTimeSpent" value="97532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8300971" visible="true" weight="0.1609808" />
@@ -855,8 +840,8 @@
     <entry file="file://$PROJECT_DIR$/../README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="34">
-            <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <first_editor>
+            <caret selection-end-line="2" selection-end-column="41" />
           </first_editor>
           <second_editor />
         </state>
