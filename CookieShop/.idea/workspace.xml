@@ -7,34 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3847e6c7-9242-49bb-ad13-6faff34ce164" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/UserCenterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/UserGoodsCartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/WEB-INF/classes/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/WEB-INF/classes/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/goods_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/goods_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/goods_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/user_register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CookieShop_war_exploded/user_register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/AdminGoodsAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsEditshowServelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/AdminGoodsEditshowServelt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodRecommendListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GoodRecommendListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GoodsDetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/OrderListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/OrderListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserRegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/UserRegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/goods_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/goods_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/goods_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/goods_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/goods_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/goods_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/goods_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/goods_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user_register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user_register.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/src/servlet/UserCenterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -270,6 +243,11 @@
             <path>
               <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,13 +284,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551793538923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551794036926" />
     <property name="last_opened_file_path" value="D:/maven/apache-maven-3.6.0/conf/settings.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.21271676" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -489,34 +467,33 @@
       <workItem from="1551772641140" duration="3074000" />
       <workItem from="1551776811009" duration="665000" />
       <workItem from="1551785391994" duration="842000" />
-      <workItem from="1551786259156" duration="7067000" />
+      <workItem from="1551786259156" duration="7614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103741000" />
+    <option name="totallyTimeSpent" value="104288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8299663" visible="true" weight="0.1609808" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8300971" visible="true" weight="0.1609808" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.17003366" side_tool="true" visible="true" weight="0.1609808" />
+      <window_info id="Web" order="7" sideWeight="0.1699029" side_tool="true" visible="true" weight="0.1609808" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722221" visible="true" weight="0.3557484" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722221" weight="0.3557484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39839572" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32946146" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50277776" side_tool="true" weight="0.328877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.318872" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -939,7 +916,7 @@
     <entry file="file://$PROJECT_DIR$/src/servlet/UserCenterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
