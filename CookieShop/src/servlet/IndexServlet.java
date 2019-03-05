@@ -1,7 +1,9 @@
 package servlet;
 
 //import com.mysql.cj.Session;
+import model.Type;
 import service.GoodsService;
+import service.TypeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +16,12 @@ import java.util.Map;
 
 @WebServlet(name = "IndexServlet",urlPatterns = "/index")
 public class IndexServlet extends HttpServlet {
+    private TypeService tService = new TypeService();
+    private GoodsService gService=new GoodsService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-    private GoodsService gService=new GoodsService();
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String,Object> ScrollGood=gService.getScrollGood();
         request.setAttribute("scroll",ScrollGood);
@@ -29,6 +33,8 @@ public class IndexServlet extends HttpServlet {
         request.setAttribute("hotList",hotList);
 
         //response.sendRedirect("index.jsp");
+        List<Type> list= tService.GetAllType();
+        request.setAttribute("list", list);
         request.getRequestDispatcher("index.jsp").forward(request,response);
 
 

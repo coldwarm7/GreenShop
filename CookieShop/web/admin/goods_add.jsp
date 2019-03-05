@@ -63,7 +63,7 @@
 			<div class="col-sm-6">
 				<select class="form-control" id="select_topic" name="typeid">
 
-					<c:forEach items="${typeList }" var="t">
+					<c:forEach items="${list }" var="t">
 						<option value="${t.id }">${t.name }</option>
 					</c:forEach>
 

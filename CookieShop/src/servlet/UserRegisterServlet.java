@@ -1,7 +1,10 @@
 package servlet;
 
+import model.Type;
 import model.User;
 import org.apache.commons.beanutils.BeanUtils;
+import service.GoodsService;
+import service.TypeService;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -11,10 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
-@WebServlet(name = "user_register",urlPatterns = "/user_rigister")
+@WebServlet(name = "user_register",urlPatterns = "/user_register")
 public class UserRegisterServlet extends HttpServlet {
     private UserService uService = new UserService();
+    private TypeService tService = new TypeService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = new User();
         try {
@@ -37,5 +42,8 @@ public class UserRegisterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        List<Type> list= tService.GetAllType();
+        request.setAttribute("list", list);
+        request.getRequestDispatcher("user_register.jsp").forward(request,response);
     }
 }

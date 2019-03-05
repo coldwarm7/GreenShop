@@ -19,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1 class="navbar-brand"><a href="/index">蛋糕店</a></h1>
+                <h1 class="navbar-brand"><a href="/index">绿色商城</a></h1>
             </div>
             <!--navbar-header-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +36,7 @@
 
                                             <li><a class="list" href="/goods_list">全部系列</a></li>
 
-                                            <c:forEach items="${typeList}" var="t">
+                                            <c:forEach items="${list }" var="t">
                                                 <li><a class="list" href="/goods_list?typeid=${t.id}">${t.name}</a></li>
                                             </c:forEach>
 
@@ -51,11 +51,11 @@
                     <li><a href="/goodsrecommend_list?type=3" <c:if test="${param.flag==3 && t==3}">class="active"</c:if>>新品</a></li>
 
                     <c:choose><c:when test="${empty user }">
-                        <li><a href="/user_register.jsp" <c:if test="${param.flag==10 }">class="active"</c:if>>注册</a></li>
-                        <li><a href="/user_login.jsp" <c:if test="${param.flag==9 }">class="active"</c:if>>登录</a></li>
+                        <li><a href="/user_register" <c:if test="${param.flag==10 }">class="active"</c:if>>注册</a></li>
+                        <li><a href="/user_login" <c:if test="${param.flag==9 }">class="active"</c:if>>登录</a></li>
                     </c:when><c:otherwise>
                         <li><a href="/order_list" <c:if test="${param.flag==5 }">class="active"</c:if>>我的订单</a></li>
-                        <li><a href="/user_center.jsp" <c:if test="${param.flag==4 }">class="active"</c:if>>个人中心</a></li>
+                        <li><a href="/user_center" <c:if test="${param.flag==4 }">class="active"</c:if>>个人中心</a></li>
                         <li><a href="/user_logout" >退出</a></li>
                     </c:otherwise>
                     </c:choose>
@@ -80,7 +80,7 @@
             </div>
 
             <div class="header-right cart">
-                <a href="goods_cart.jsp">
+                <a href="goods_cart">
                     <span class="glyphicon glyphicon-shopping-cart <c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true"><span class="card_num"><c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span></span>
                 </a>
             </div>

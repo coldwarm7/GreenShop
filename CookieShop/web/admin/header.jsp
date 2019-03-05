@@ -9,7 +9,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.jsp">蛋糕店后台</a>
+            <a class="navbar-brand" href="index.jsp">绿色商城后台管理</a>
         </div>
         <div>
             <ul class="nav navbar-nav">

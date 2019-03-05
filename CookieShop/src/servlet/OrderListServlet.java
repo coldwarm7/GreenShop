@@ -1,8 +1,10 @@
 package servlet;
 
 import model.Order;
+import model.Type;
 import model.User;
 import service.OrderService;
+import service.TypeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +17,8 @@ import java.util.List;
 @WebServlet(name = "order_list", urlPatterns = "/order_list")
 public class OrderListServlet extends HttpServlet {
     private OrderService oService = new OrderService();
+    private TypeService tService = new TypeService();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -28,6 +32,8 @@ public class OrderListServlet extends HttpServlet {
             return;
         }
         List<Order> list = oService.selectAll(u.getId());
+        List<Type> typeList= tService.GetAllType();
+        request.setAttribute("list", typeList);
         request.setAttribute("orderList", list);
         request.getRequestDispatcher("/order_list.jsp").forward(request, response);
     }

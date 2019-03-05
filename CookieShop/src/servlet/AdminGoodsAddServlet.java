@@ -1,11 +1,13 @@
 package servlet;
 
 import model.Goods;
+import model.Type;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import service.GoodsService;
+import service.TypeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,10 +23,21 @@ import java.util.List;
 @WebServlet(name = "admin_goods_add",urlPatterns = "/admin/goods_add")
 public class AdminGoodsAddServlet extends HttpServlet {
     private GoodsService gService = new GoodsService();
+    private TypeService tService = new TypeService();
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Type> list= tService.GetAllType();
+        request.setAttribute("list", list);
+        request.getRequestDispatcher("/admin/goods_add.jsp").forward(request, response);
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
         DiskFileItemFactory factory=new DiskFileItemFactory();
         ServletFileUpload upload = new ServletFileUpload(factory);
         try {
@@ -84,13 +97,5 @@ public class AdminGoodsAddServlet extends HttpServlet {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        doGet(request, response);
     }
 }

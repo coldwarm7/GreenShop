@@ -1,7 +1,9 @@
 package servlet;
 
 import model.Page;
+import model.Type;
 import service.GoodsService;
+import service.TypeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,10 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "goodrecommendList",urlPatterns = "/goodsrecommend_list")
 public class GoodRecommendListServlet extends HttpServlet {
     private GoodsService gService = new GoodsService();
+    private TypeService tService = new TypeService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int type = Integer.parseInt(request.getParameter("type") ) ;
@@ -43,6 +47,10 @@ public class GoodRecommendListServlet extends HttpServlet {
         }
         request.setAttribute("p", p);
         request.setAttribute("t", type);
+
+        List<Type> list= tService.GetAllType();
+        request.setAttribute("list", list);
+
         request.getRequestDispatcher("goodsrecommend_list.jsp").forward(request, response);
     }
 }
