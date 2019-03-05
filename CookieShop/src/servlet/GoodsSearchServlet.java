@@ -1,7 +1,8 @@
 package servlet;
 
+import model.Page;
 import service.GoodsService;
-import model.*;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
