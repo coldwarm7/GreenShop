@@ -10,7 +10,7 @@
 <div class="footer">
     <div class="container">
         <div class="text-center">
-            <p>vili www.vilicode.com © All rights Reseverd</p>
+            <p>syzt.foodmate.net © 广东盛元中天生物科技有限公司</p>
         </div>
     </div>
 </div>
