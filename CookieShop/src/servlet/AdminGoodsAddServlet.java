@@ -50,7 +50,7 @@ public class AdminGoodsAddServlet extends HttpServlet {
                             g.setName(item.getString("utf-8"));
                             break;
                         case "price":
-                            g.setPrice(Integer.parseInt(item.getString("utf-8")));
+                            g.setPrice(Float.parseFloat(item.getString("utf-8")));
                             break;
                         case "intro":
                             g.setIntro(item.getString("utf-8"));
@@ -68,6 +68,7 @@ public class AdminGoodsAddServlet extends HttpServlet {
                     fileName = fileName.substring(fileName.lastIndexOf("."));
                     fileName = "/"+new Date().getTime()+fileName;
                     String path = this.getServletContext().getRealPath("/picture")+fileName;
+
                     InputStream in = item.getInputStream();
                     FileOutputStream out = new FileOutputStream(path);
                     byte[] buffer = new byte[1024];
