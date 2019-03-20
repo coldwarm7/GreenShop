@@ -34,6 +34,16 @@ public class Order {
         total = PriceUtil.add(total, g.getPrice());
     }
 
+    public void addGoods(Goods g,int amount){
+        if(itemMap.containsKey(g.getId())) {
+            OrderItem item = itemMap.get(g.getId());
+            item.setAmount(item.getAmount()+amount);
+        }else {
+            OrderItem item = new OrderItem(g.getPrice(),amount,g,this);
+            itemMap.put(g.getId(), item);
+        }
+    }
+
     public List<OrderItem> getItemList() {
         return itemList;
     }
@@ -133,5 +143,23 @@ public class Order {
     }
     public Order() {
         super();
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", total=" + total +
+                ", amount=" + amount +
+                ", status=" + status +
+                ", paytype=" + paytype +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", datetime=" + datetime +
+                ", user=" + user +
+                ", itemMap=" + itemMap +
+                ", itemList=" + itemList +
+                '}';
     }
 }

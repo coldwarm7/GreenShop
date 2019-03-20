@@ -122,6 +122,21 @@ public class GoodsService {
         p.setList(list);
         return p;
     }
+    public List<Goods> getSearchGoods(String keyword) {
+
+        List list=null;
+        try {
+            list = gDao.selectSearchGoods(keyword);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        if (list == null){
+            return null;
+        }
+
+        return list;
+    }
     public void addRecommend(int id,int type) {
         try {
             gDao.addRecommend(id, type);
@@ -161,5 +176,14 @@ public class GoodsService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+    public List<Map<String,Object>> findAll(int typeId){
+        List<Map<String,Object>> list=null;
+        try {
+            list=gDao.findAll(typeId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

@@ -7,6 +7,15 @@ public class OrderItem {
     private String goodsName;
     private Goods goods;
     private Order order;// order_id
+    private int goods_id;
+
+    public int getGoods_id() {
+        return goods_id;
+    }
+
+    public void setGoods_id(int goods_id) {
+        this.goods_id = goods_id;
+    }
 
     public void setName(String name) {
         this.goodsName=name;

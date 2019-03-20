@@ -29,7 +29,7 @@ public class OrderConfirmServlet extends HttpServlet {
         }
         o.setDatetime(new Date());
         o.setStatus(2);
-        o.setUser((User) request.getSession().getAttribute("user"));
+        o.setUser((User)request.getSession().getAttribute("user"));
         oService.addOrder(o);
         request.getSession().removeAttribute("order");
 

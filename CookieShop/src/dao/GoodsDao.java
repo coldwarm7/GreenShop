@@ -84,6 +84,11 @@ public class GoodsDao {
         String sql = "select * from goods where name like ? limit ?,?";
         return r.query(sql, new BeanListHandler<Goods>(Goods.class),"%"+keyword+"%",(pageNumber-1)*pageSize,pageSize);
     }
+    public List<Goods> selectSearchGoods(String keyword) throws SQLException{
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select g.id,g.name,g.cover,g.image1,g.image2,g.price,g.intro,g.stock,t.id typeid,t.name typename from goods g,type t where g.name like ? and g.type_id=t.id ";
+        return r.query(sql, new BeanListHandler<Goods>(Goods.class),"%"+keyword+"%");
+    }
     public boolean isScroll(Goods g) throws SQLException {
         return isRecommend(g, 1);
     }
@@ -127,5 +132,15 @@ public class GoodsDao {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "delete from goods where id = ?";
         r.update(sql,id);
+    }
+    public List<Map<String,Object>> findAll(int typeId) throws SQLException{
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        if (typeId == 0){
+            String sql="select DISTINCT g.id,g.name,g.cover,g.price,t.name typename from goods g,type t where  g.type_id=t.id";
+            return r.query(sql, new MapListHandler());
+        }else {
+            String sql="select DISTINCT g.id,g.name,g.cover,g.price,t.name typename from goods g,type t where g.type_id=? and  g.type_id=t.id";
+            return r.query(sql, new MapListHandler(),typeId);
+        }
     }
 }

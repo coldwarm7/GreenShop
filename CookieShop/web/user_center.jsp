@@ -58,11 +58,11 @@
 						<h4>安全信息</h4>
 						<div class="input">
 							<span>原密码</span>
-							<input type="text" name="password" placeholder="请输入原密码"> 
+							<input type="password" name="password" placeholder="请输入原密码">
 						</div>
 						<div class="input">
 							<span>新密码</span>
-							<input type="text" name="newPassword" placeholder="请输入新密码"> 
+							<input type="password" name="newPassword" placeholder="请输入新密码">
 						</div>
 						<div class="clearfix"> </div>
 						<div class="register-but text-center">
