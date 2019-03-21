@@ -77,10 +77,10 @@
 				<div class="col-md-4 single-grid1">
 					<!-- <h2>商品分类</h2> -->
 					<ul>
-                        <li><a  href="/goods_list">全部系列</a></li>
+                        <li><a  href="/greenshop/goods_list">全部系列</a></li>
 
                         <c:forEach items="${list}" var="t">
-                            <li><a href="/goods_list?typeid=${t.id}">${t.name}</a></li>
+                            <li><a href="/greenshop/goods_list?typeid=${t.id}">${t.name}</a></li>
                         </c:forEach>
 					</ul>
 				</div>

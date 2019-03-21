@@ -15,7 +15,7 @@
 	<jsp:include page="/admin/header.jsp"></jsp:include>
 
 	<br><br>
-	<form class="form-horizontal" action="/admin/goods_add" method="post" enctype="multipart/form-data">
+	<form class="form-horizontal" action="/greenshop/admin/goods_add" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">名称</label>
 			<div class="col-sm-6">

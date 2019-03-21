@@ -30,11 +30,11 @@
 
 <div class="banner">
     <div class="container">
-        <h2 class="hdng"><a href="/goods_detail?id=${scroll.id}">${scroll.name}</a><span></span></h2>
+        <h2 class="hdng"><a href="/greenshop/goods_detail?id=${scroll.id}">${scroll.name}</a><span></span></h2>
         <p>今日精选推荐</p>
         <a class="banner_a" href="javascript:;" onclick="buy(${scroll.id})">立刻购买</a>
         <div class="banner-text">
-            <a href="/goods_detail?id=${scroll.id}">
+            <a href="/greenshop/goods_detail?id=${scroll.id}">
                 <img src="${scroll.cover}" alt="${scroll.name}" width="350" height="350">
             </a>
         </div>
@@ -52,13 +52,13 @@
         <div class="gallery-grids">
             <c:forEach items="${hotList}" var="g">
                 <div class="col-md-4 gallery-grid glry-two">
-                    <a href="/goods_detail?id=${g.id}">
+                    <a href="/greenshop/goods_detail?id=${g.id}">
                         <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
                     </a>
                     <div class="gallery-info galrr-info-two">
                         <p>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
+                            <a href="/greenshop/goods_detail?id=${g.id}">查看详情</a>
                         </p>
                         <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
                         <div class="clearfix"> </div>
@@ -83,13 +83,13 @@
         <div class="gallery-grids">
             <c:forEach items="${newList}" var="g">
                 <div class="col-md-3 gallery-grid ">
-                    <a href="/goods_detail?id=${g.id}">
+                    <a href="/greenshop/goods_detail?id=${g.id}">
                         <img src="${g.cover}" class="img-responsive" alt="${g.name}"/>
                     </a>
                     <div class="gallery-info">
                         <p>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
+                            <a href="/greenshop/goods_detail?id=${g.id}">查看详情</a>
                         </p>
                         <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
                         <div class="clearfix"> </div>

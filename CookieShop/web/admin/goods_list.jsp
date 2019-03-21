@@ -13,15 +13,15 @@
 
 	<jsp:include page="/admin/header.jsp"></jsp:include>
 
-	<div class="text-right"><a class="btn btn-warning" href="/admin/goods_add">添加商品</a></div>
+	<div class="text-right"><a class="btn btn-warning" href="/greenshop/admin/goods_add">添加商品</a></div>
 
 	<br>
 
 	<ul role="tablist" class="nav nav-tabs">
-		<li <c:if test="${type==0 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list">全部商品</a></li>
-		<li <c:if test="${type==1 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=1">条幅推荐</a></li>
-		<li <c:if test="${type==2 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=2">热销推荐</a></li>
-		<li <c:if test="${type==3 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=3">新品推荐</a></li>
+		<li <c:if test="${type==0 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/goods_list">全部商品</a></li>
+		<li <c:if test="${type==1 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/goods_list?type=1">条幅推荐</a></li>
+		<li <c:if test="${type==2 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/goods_list?type=2">热销推荐</a></li>
+		<li <c:if test="${type==3 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/goods_list?type=3">新品推荐</a></li>
 	</ul>
 
 
@@ -45,8 +45,8 @@
 		<c:forEach items="${p.list }" var="g">
 			<tr>
 				<td><p>${g.id }</p></td>
-				<td><p><a href="/goods_detail?id=${g.id}" target="_blank"><img src="${g.cover}" width="100px" height="100px"></a></p></td>
-				<td><p><a href="/goods_detail?id=${g.id}" target="_blank">${g.name}</a></p></td>
+				<td><p><a href="/greenshop/goods_detail?id=${g.id}" target="_blank"><img src="${g.cover}" width="100px" height="100px"></a></p></td>
+				<td><p><a href="/greenshop/goods_detail?id=${g.id}" target="_blank">${g.name}</a></p></td>
 				<td><p>${g.intro}</p></td>
 				<td><p>${g.price}</p></td>
 				<td><p>${g.type.name}</p></td>
@@ -54,32 +54,32 @@
 					<p>
 						<c:choose>
 							<c:when test="${g.isScroll }">
-								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出条幅</a>
+								<a class="btn btn-info" href="/greenshop/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出条幅</a>
 							</c:when>
 							<c:otherwise>
-								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入条幅</a>
+								<a class="btn btn-primary" href="/greenshop/admin/goods_recommend?id=${g.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入条幅</a>
 							</c:otherwise>
 						</c:choose>
 						<c:choose>
 							<c:when test="${g.isHot }">
-								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出热销</a>
+								<a class="btn btn-info" href="/greenshop/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出热销</a>
 							</c:when>
 							<c:otherwise>
-								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入热销</a>
+								<a class="btn btn-primary" href="/greenshop/admin/goods_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入热销</a>
 							</c:otherwise>
 						</c:choose>
 						<c:choose>
 							<c:when test="${g.isNew }">
-								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">移出新品</a>
+								<a class="btn btn-info" href="/greenshop/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">移出新品</a>
 							</c:when>
 							<c:otherwise>
-								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">加入新品</a>
+								<a class="btn btn-primary" href="/greenshop/admin/goods_recommend?id=${g.id }&method=add&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">加入新品</a>
 							</c:otherwise>
 						</c:choose>
 
 					</p>
-					<a class="btn btn-success" href="/admin/goods_editshow?id=${g.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
-					<a class="btn btn-danger" href="/admin/goods_delete?id=${g.id }&pageNumber=${p.pageNumber}&type=${type}">删除</a>
+					<a class="btn btn-success" href="/greenshop/admin/goods_editshow?id=${g.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
+					<a class="btn btn-danger" href="/greenshop/admin/goods_delete?id=${g.id }&pageNumber=${p.pageNumber}&type=${type}">删除</a>
 				</td>
 			</tr>
 		</c:forEach>
@@ -89,7 +89,7 @@
 
 	<br>
 	<jsp:include page="/page.jsp">
-		<jsp:param value="/admin/goods_list" name="url"/>
+		<jsp:param value="/greenshop/admin/goods_list" name="url"/>
 		<jsp:param value="&type=${type }" name="param"/>
 	</jsp:include>
 	<br>

@@ -15,7 +15,7 @@
 
 	<br><br>
 
-	<form class="form-horizontal" action="/admin/user_reset" method="post">
+	<form class="form-horizontal" action="/greenshop/admin/user_reset" method="post">
 		<input type="hidden" name="id" value="${param.id }">
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">用户名</label>

@@ -80,13 +80,13 @@ public class AdminGoodsAddServlet extends HttpServlet {
                     item.delete();
                     switch(item.getFieldName()) {
                         case "cover":
-                            g.setCover("/picture"+fileName);
+                            g.setCover("/greenshop/picture"+fileName);
                             break;
                         case "image1":
-                            g.setImage1("/picture"+fileName);
+                            g.setImage1("/greenshop/picture"+fileName);
                             break;
                         case "image2":
-                            g.setImage2("/picture"+fileName);
+                            g.setImage2("/greenshop/picture"+fileName);
                             break;
                     }
                 }

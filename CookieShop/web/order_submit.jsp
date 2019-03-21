@@ -29,7 +29,7 @@
 	<div class="cart-items">
 		<div class="container">
 			<h2>确认收货信息</h2>
-			<form class="form-horizontal" action="/order_confirm" method="post" id="payform">
+			<form class="form-horizontal" action="/greenshop/order_confirm" method="post" id="payform">
 				<div class="row">
 					<label class="control-label col-md-1">收货人</label>
 					<div class="col-md-6">

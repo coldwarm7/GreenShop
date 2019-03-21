@@ -16,7 +16,7 @@
 	<jsp:include page="/admin/header.jsp"></jsp:include>
 
 	<br><br>
-	<form class="form-horizontal" action="/admin/goods_edit" method="post" enctype="multipart/form-data">
+	<form class="form-horizontal" action="/greenshop/admin/goods_edit" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="${g.id }"/>
 		<input type="hidden" name="cover" value="${g.cover }"/>
 		<input type="hidden" name="image1" value="${g.image1 }"/>

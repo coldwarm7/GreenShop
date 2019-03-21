@@ -17,7 +17,7 @@
 	<br>
 
 	<div>
-		<form class="form-inline" method="post" action="/admin/type_add">
+		<form class="form-inline" method="post" action="/greenshop/admin/type_add">
 			<input type="text" class="form-control" id="input_name" name="name" placeholder="输入类目名称" required="required" style="width: 500px">
 			<input type="submit" class="btn btn-warning" value="添加类目"/>
 		</form>
@@ -44,8 +44,8 @@
 				<td><p>${t.id }</p></td>
 				<td><p>${t.name }</p></td>
 				<td>
-					<a class="btn btn-primary" href="/admin/type_edit.jsp?id=${t.id }&name=${t.encodeName }">修改</a>
-					<a class="btn btn-danger" href="/admin/type_delete?id=${t.id }">删除</a>
+					<a class="btn btn-primary" href="/greenshop/admin/type_edit.jsp?id=${t.id }&name=${t.encodeName }">修改</a>
+					<a class="btn btn-danger" href="/greenshop/admin/type_delete?id=${t.id }">删除</a>
 				</td>
 			</tr>
 		</c:forEach>

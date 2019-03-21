@@ -46,7 +46,7 @@
 
             <c:forEach items="${p.list}" var="g">
                 <div class="product-grid">
-                    <a href="/goods_detail?id=${g.id}">
+                    <a href="/greenshop/goods_detail?id=${g.id}">
                         <div class="more-product"><span> </span></div>
                         <div class="product-img b-link-stripe b-animate-go  thickbox">
                             <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="240" height="240">
@@ -73,7 +73,7 @@
         </div>
 
         <jsp:include page="page.jsp">
-            <jsp:param name="url" value="/goodsrecommend_list"></jsp:param>
+            <jsp:param name="url" value="/greenshop/goodsrecommend_list"></jsp:param>
             <jsp:param name="param" value="&type=${t}"></jsp:param>
         </jsp:include>
         </div>

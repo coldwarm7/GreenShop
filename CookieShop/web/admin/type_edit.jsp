@@ -17,7 +17,7 @@
 
 	<br><br>
 
-	<form class="form-horizontal" action="/admin/type_edit" method="post">
+	<form class="form-horizontal" action="/greenshop/admin/type_edit" method="post">
 		<input type="hidden" name="id" value="${param.id }">
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">类目名称</label>

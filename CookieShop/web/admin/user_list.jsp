@@ -50,8 +50,8 @@
 				<td><p>${u.phone }</p></td>
 				<td><p>${u.address }</p></td>
 				<td>
-					<a class="btn btn-info" href="/admin/user_reset.jsp?id=${u.id }&username=${u.username }&email=${u.email }">重置密码</a>
-					<a class="btn btn-primary" href="/admin/user_editshow?id=${u.id }">修改</a>
+					<a class="btn btn-info" href="/greenshop/admin/user_reset.jsp?id=${u.id }&username=${u.username }&email=${u.email }">重置密码</a>
+					<a class="btn btn-primary" href="/greenshop/admin/user_editshow?id=${u.id }">修改</a>
 					<a class="btn btn-danger" href="${pageContext.request.contextPath }/admin/user_delete?id=${u.id }">删除</a>
 				</td>
 			</tr>
@@ -62,7 +62,7 @@
 
 <br>
 	<jsp:include page="/page.jsp">
-		<jsp:param value="/admin/user_list" name="url"/>
+		<jsp:param value="/greenshop/admin/user_list" name="url"/>
 	</jsp:include>
 <br>
 </div>

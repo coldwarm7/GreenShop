@@ -56,7 +56,7 @@ public class AppOrderConfirmServlet extends HttpServlet {
         for (OrderItem orderItem : orderItems){
             totalAmount = totalAmount + orderItem.getAmount();
             totalPrice = totalPrice + orderItem.getAmount() * goodsService.getGoodsById(orderItem.getGoods_id()).getPrice();
-            if (goodsService.getGoodsById(orderItem.getGoods_id()) == null){
+            if (goodsService.getGoodsById(orderItem.getGoods_id()) == null || goodsService.getGoodsById(orderItem.getGoods_id()).getStock() <= 0){
                 msg.setMsg("商品不存在，订单创建失败");
                 msg.setResult(false);
                 String registerJson = JSON.toJSONString(msg);

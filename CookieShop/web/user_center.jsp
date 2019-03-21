@@ -19,7 +19,7 @@
 	<jsp:include page="/header.jsp">
 		<jsp:param value="4" name="flag"/>
 	</jsp:include>
-	<c:if test="${empty user}"><%response.sendRedirect("/index");%></c:if>
+	<c:if test="${empty user}"><%response.sendRedirect("/greenshop/index");%></c:if>
 	<!--account-->
 	<div class="account">
 		<div class="container">
@@ -33,7 +33,7 @@
 				
 					<div class="register-top-grid">
 						<h3>个人中心</h3>
-						<form action="/user_changeaddress" method="post">
+						<form action="/greenshop/user_changeaddress" method="post">
 						<!-- 收货信息 start -->
 						<h4>收货信息</h4>
 						<div class="input">
@@ -54,7 +54,7 @@
 						<!-- 收货信息 end -->
 						</form>
 						<hr>
-						<form action="/user_changepwd" method="post">
+						<form action="/greenshop/user_changepwd" method="post">
 						<h4>安全信息</h4>
 						<div class="input">
 							<span>原密码</span>

@@ -42,12 +42,12 @@
 				<div class="cart-header col-md-6">
 					<div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
-							<a href="/goods_detail?id=${item.key}">
-								<img src="${pageContext.request.contextPath }${item.value.goods.cover}" class="img-responsive">
+							<a href="/greenshop/goods_detail?id=${item.key}">
+								<img src="${item.value.goods.cover}" class="img-responsive">
 							</a>
 						</div>
 						<div class="cart-item-info">
-							<h3><a href="/goods_detail?id=${item.key}">${item.value.goods.name}</a></h3>
+							<h3><a href="/greenshop/goods_detail?id=${item.key}">${item.value.goods.name}</a></h3>
 							<h3><span>单价: ¥ ${item.value.price}</span></h3>
 							<h3><span>数量: ${item.value.amount}</span></h3>
 							<a class="btn btn-info" href="javascript:buy(${item.key});">增加</a>
@@ -62,7 +62,7 @@
 			<div class="cart-header col-md-12">
 				<hr>
 				<h3>订单总金额: ¥ ${order.total}</h3>
-				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交订单</a>
+				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/greenshop/order_submit">提交订单</a>
 			</div>
 			
 			

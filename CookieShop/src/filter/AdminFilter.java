@@ -18,7 +18,7 @@ public class AdminFilter implements Filter {
         HttpServletResponse requestp = (HttpServletResponse)resp;
         User u = (User) request.getSession().getAttribute("user");
         if(u==null || u.isIsadmin()==false) {
-            requestp.sendRedirect("../index.jsp");
+            requestp.sendRedirect("../greenshop/index.jsp");
         }else {
             // pass the request along the filter chain
             chain.doFilter(req, resp);

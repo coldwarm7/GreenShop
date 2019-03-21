@@ -28,7 +28,7 @@ public class OrderListServlet extends HttpServlet {
         User u = (User) request.getSession().getAttribute("user");
         if(u==null)
         {
-            response.sendRedirect("/index");
+            response.sendRedirect("/greenshop/index");
             return;
         }
         List<Order> list = oService.selectAll(u.getId());

@@ -16,7 +16,7 @@
 
 	<br><br>
 
-	<form class="form-horizontal" action="/admin/user_edit" method="post">
+	<form class="form-horizontal" action="/greenshop/admin/user_edit" method="post">
 		<input type="hidden" name="id" value="${u.id }">
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">用户名</label>

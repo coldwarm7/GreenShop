@@ -21,11 +21,11 @@
 	<br>
 
 	<ul role="tablist" class="nav nav-tabs">
-		<li <c:if test="${status==0 }">class="active"</c:if> role="presentation"><a href="/admin/order_list">全部订单</a></li>
-		<li <c:if test="${status==1 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=1">未付款</a></li>
-		<li <c:if test="${status==2 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=2">已付款</a></li>
-		<li <c:if test="${status==3 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=3">配送中</a></li>
-		<li <c:if test="${status==4 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=4">已完成</a></li>
+		<li <c:if test="${status==0 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/order_list">全部订单</a></li>
+		<li <c:if test="${status==1 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/order_list?status=1">未付款</a></li>
+		<li <c:if test="${status==2 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/order_list?status=2">已付款</a></li>
+		<li <c:if test="${status==3 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/order_list?status=3">配送中</a></li>
+		<li <c:if test="${status==4 }">class="active"</c:if> role="presentation"><a href="/greenshop/admin/order_list?status=4">已完成</a></li>
 	</ul>
 
 	<br>
@@ -79,12 +79,12 @@
 				<td><p>${order.datetime }</p></td>
 				<td>
 					<c:if test="${order.status==2 }">
-						<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">发货</a>
+						<a class="btn btn-success" href="/greenshop/admin/order_status?id=${order.id }&status=3">发货</a>
 					</c:if>
 					<c:if test="${order.status==3 }">
-						<a class="btn btn-warning" href="/admin/order_status?id=${order.id }&status=4">完成</a>
+						<a class="btn btn-warning" href="/greenshop/admin/order_status?id=${order.id }&status=4">完成</a>
 					</c:if>
-					<a class="btn btn-danger" href="/admin/order_delete?id=${order.id }&pageNumber=${p.pageNumber}&status=${status}">删除</a>
+					<a class="btn btn-danger" href="/greenshop/admin/order_delete?id=${order.id }&pageNumber=${p.pageNumber}&status=${status}">删除</a>
 				</td>
 			</tr>
 		</c:forEach>
@@ -94,7 +94,7 @@
 
 <br>
 	<jsp:include page="/page.jsp">
-		<jsp:param value="/admin/order_list" name="url"/>
+		<jsp:param value="/greenshop/admin/order_list" name="url"/>
 		<jsp:param value="&status=${status}" name="param"/>
 	</jsp:include>
 <br>
