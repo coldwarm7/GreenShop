@@ -2,7 +2,7 @@
   <artifact type="war" name="greenshop">
     <output-path>$PROJECT_DIR$/out/artifacts/greenshop</output-path>
     <root id="archive" name="greenshop.war">
-      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+      <element id="artifact" artifact-name="GreenShop:war exploded" />
     </root>
   </artifact>
 </component>
