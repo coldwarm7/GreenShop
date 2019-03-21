@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 
-@WebServlet(name = "AppChangeAddressServlet",urlPatterns = "/greenshop/app/user_changeaddress")
+@WebServlet(name = "AppChangeAddressServlet",urlPatterns = "/app/user_changeaddress")
 public class AppChangeAddressServlet extends HttpServlet {
 
     private UserService uService = new UserService();

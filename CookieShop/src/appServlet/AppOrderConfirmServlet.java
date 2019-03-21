@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "AppOrderConfirmServlet",urlPatterns = "/greenshop/app/order_confirm")
+@WebServlet(name = "AppOrderConfirmServlet",urlPatterns = "/app/order_confirm")
 public class AppOrderConfirmServlet extends HttpServlet {
     private OrderService oService = new OrderService();
     private UserService userService = new UserService();

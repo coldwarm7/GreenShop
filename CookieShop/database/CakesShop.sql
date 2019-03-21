@@ -1,209 +1,175 @@
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
---
--- Host: 123.206.49.150    Database: cakeshop
--- ------------------------------------------------------
--- Server version	5.7.24-log
+/*
+ Navicat Premium Data Transfer
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+ Source Server         : localhost
+ Source Server Type    : MySQL
+ Source Server Version : 50725
+ Source Host           : localhost:3306
+ Source Schema         : cakesshop
 
---
--- Table structure for table `goods`
---
+ Target Server Type    : MySQL
+ Target Server Version : 50725
+ File Encoding         : 65001
 
+ Date: 21/03/2019 18:21:58
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for goods
+-- ----------------------------
 DROP TABLE IF EXISTS `goods`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `goods` (
+CREATE TABLE `goods`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `cover` varchar(45) DEFAULT NULL,
-  `image1` varchar(45) DEFAULT NULL,
-  `image2` varchar(45) DEFAULT NULL,
-  `price` float DEFAULT NULL,
-  `intro` varchar(300) DEFAULT NULL,
-  `stock` int(11) DEFAULT NULL,
-  `type_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_type_id_idx` (`type_id`),
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cover` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `image1` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `image2` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` float NULL DEFAULT NULL,
+  `intro` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `stock` int(11) NULL DEFAULT NULL,
+  `type_id` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_type_id_idx`(`type_id`) USING BTREE,
   CONSTRAINT `fk_type_id` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE = InnoDB AUTO_INCREMENT = 188 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `goods`
---
+-- ----------------------------
+-- Records of goods
+-- ----------------------------
+INSERT INTO `goods` VALUES (181, '猕猴桃', '/greenshop/picture/1552811362353.jpg', '/greenshop/picture/1552811362361.jpg', '/greenshop/picture/1552811362366.jpg', 6.01, '猕猴桃是营养价值极高的水果  被誉为“水果之王”、“维C之王”  每天吃一个  让你每天都容光焕发  变更美～  熬夜最佳补品  猕猴桃含有丰富的维生素C，可强化免疫系统，补充脑力所消耗的营养；它的低钠高钾的完美比例，可补充熬夜加班所失去的体力。', 99, 1);
+INSERT INTO `goods` VALUES (182, '苹果', '/greenshop/picture/1552811387910.jpg', '/greenshop/picture/1552811387916.jpg', '/greenshop/picture/1552811387921.jpg', 5, '绿添福1斤村状元冰糖心苹果水果批 包邮 当季新鲜水果萍果红富士', 10, 1);
+INSERT INTO `goods` VALUES (184, '橘子', '/greenshop/picture/1552811432034.jpg', '/greenshop/picture/1552811432041.jpg', '/greenshop/picture/1552811432047.jpg', 6.6, '广西武鸣沃柑橘子水果桔子新鲜薄皮包邮当季皇帝贡柑', 10, 1);
+INSERT INTO `goods` VALUES (185, '土豆', '/greenshop/picture/1552811449095.jpg', '/greenshop/picture/1552811449101.jpg', '/greenshop/picture/1552811449108.jpg', 3, '土豆含有丰富的维生素及钙、钾等微量元素，且易于消化吸收，营养丰富。能供给人体大量的热能，人只靠马铃薯和全脂牛奶就足以维持生命和健康，在欧美国家特别是北美，土豆早就成为第二主食', 10, 2);
+INSERT INTO `goods` VALUES (186, '芹菜', '/greenshop/picture/1553160949984.jpg', '/greenshop/picture/1553160949989.jpg', '/greenshop/picture/1553160949995.jpg', 6.1, '芹菜', 999, 2);
 
-LOCK TABLES `goods` WRITE;
-/*!40000 ALTER TABLE `goods` DISABLE KEYS */;
-INSERT INTO `goods` VALUES (1,'冰雪之恋','/picture/1-1.jpg','/picture/1-2.jpg','/picture/1-3.jpg',50.2,'香浓巧克力，浓浓安慕兮啊，，，',789,1),(2,'浪漫甜心101','/picture/2-1.jpg','/picture/2-2.jpg','/picture/2-3.jpg',229,'圣洁的白色玫瑰，烘托着光亮饱满的红艳果实，烂漫的色彩，惹人无比爱怜。新鲜草莓和特调淡奶油混合而成的松软的蛋糕坯，美丽纯净，充满了幸福甜蜜的味道主口味：草莓口味 主要原料：新西兰乳脂奶油，古巴朗姆酒，韩国幼砂糖，鲜草莓。 甜度： 三星（满五星） 最佳食用温度：6-10摄氏度',10,8),(3,'留恋之恋','/picture/3-1.jpg','/picture/3-2.jpg','/picture/3-3.jpg',229,'主口味:榴莲奶油味(原味蛋糕胚+榴莲酱+乳脂奶油)主要原料：新西兰乳脂奶油，古巴朗姆酒，韩国幼砂糖，鲜草莓。 甜度： 三星（满五星） 最佳食用温度：5-7摄氏度',10,5),(4,'玫瑰物语','/picture/4-1.jpg','/picture/4-2.jpg','/picture/4-3.jpg',299,'一座小小的花园 一场优美的缄默 色彩的冲撞带来幻美的视觉享受 自制的玫瑰酱调配而成的玫瑰慕斯蛋糕 口感丰富 异香诱人 忠贞的爱情充溢了玫瑰的内心,因而更加美丽\r\n主口味:玫瑰慕斯 主要原料:糖渍玫瑰,奶油芝士,乳脂奶油,朗姆酒,白巧克力软糖 甜度:三星（满五星） 最佳食用温度：5-7摄氏度',10,5),(5,'芒果列车','/picture/5-1.jpg','/picture/5-2.jpg','/picture/5-3.jpg',269,'黄橙橙的时光列车,散发出温暖的灯光,连接着过去与未来.这是一款纯慕斯型的蛋糕,芒果慕斯镶嵌芒果果冻丁,不含蛋糕胚体,均匀莫斯体和果冻,口感细腻嫩滑,酸甜适口零脂肪,美容又零脂肪\r\n主口味: 芒果慕斯 主要原料:芒果果溶,芒果果冻,乳脂奶油,法国君度力娇酒  甜度:三星（满五星） 最佳食用温度：5-7摄氏度',10,5),(6,'夜礼服','/picture/6-1.jpg','/picture/6-2.jpg','/picture/6-3.jpg',299,'空气中流动着的厚重巧克力气息,一切在夜色下坡上银装.可可野性的诱惑,加之朗姆酒的浪漫清冽,传递出来自神秘过度的魅惑与力量.\r\n主口味:香浓巧克力 主要原料:黑巧克力,乳脂奶油,大黄油,朗姆酒,巧克力果仁脆,黑巧克力软糖 甜度:四星（满五星） 最佳食用温度：5-7摄氏度',10,5),(7,'爱之玫瑰','/picture/7-1.jpg','/picture/7-2.jpg','/picture/7-3.jpg',299,'爱之魅力,悄然跃于玫瑰之上,包裹时光,翩翩起舞,让这一切置身于梦幻旅途之中邂逅玫瑰,享受梦境一刻.\r\n主口味:玫瑰奶油味 主要原料:云南玫瑰,澳洲奶油芝士,澳洲乳脂奶油,古巴朗姆酒,白巧克力软糖 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,4),(8,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(9,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(10,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(11,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(12,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(13,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(14,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(15,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(16,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(17,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(18,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(19,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(20,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(21,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(23,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(24,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(25,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(26,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(27,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(28,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(29,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(30,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(31,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(32,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(33,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(34,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(35,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(36,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(37,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(38,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(39,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(40,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(41,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(42,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(43,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(44,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(45,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(46,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(47,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(48,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(49,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(50,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(51,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(52,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(53,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(54,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(55,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(56,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(57,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(58,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(59,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(60,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(61,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(62,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(63,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(64,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(65,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(66,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(67,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(68,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(69,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(70,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(71,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(72,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(73,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(74,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(75,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(76,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(77,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(78,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(79,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(80,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(81,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(82,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(83,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(84,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(85,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(86,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(87,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(88,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(89,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(90,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(91,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(92,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(93,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(94,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(95,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(97,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(98,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(99,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(100,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(101,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(102,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(103,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(104,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(105,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(106,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(108,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(109,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(110,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(111,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(112,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(113,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(114,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(115,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(116,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(117,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(118,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(119,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(120,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(121,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(122,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(123,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(124,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(125,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(126,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(127,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(128,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(129,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(130,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(131,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(132,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(133,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(134,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(135,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(136,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(137,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(138,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(139,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(140,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(141,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(142,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(143,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(144,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(145,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(146,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(147,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(148,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(149,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(150,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(151,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(152,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(153,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(154,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(155,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(156,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(157,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(158,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(159,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(160,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(161,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(162,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(163,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(164,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(165,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(166,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(167,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(168,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(169,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(170,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(171,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2),(172,'蜂蜜蛋糕','/picture/13-1.jpg','/picture/13-1.jpg','/picture/13-1.jpg',36,'蛋黄与蜂蜜,淡奶油共同演绎的曼妙之旅.口感Q糯浓郁,回味绵软柔长.皱巴巴的造型,甜蜜蜜的感受.',10,2),(173,'意大利芝士饼干','/picture/14-1.jpg','/picture/14-1.jpg','/picture/14-1.jpg',39,'采用帕玛森芝士为主要原材料制作的意大利芝士饼,奶香浓郁,鲜香可口.',10,2),(174,'小熊乐园','/picture/8-1.jpg','/picture/8-2.jpg','/picture/8-3.jpg',299,'走进小熊乐园,与可爱的小熊一起准备过冬的食物吧,摘颗草莓藏放在巧克力做的房子里,好朋友一起分享劳动的果实.\r\n主口味:草莓奶油味 主要原料:乳脂奶油,纯巧克力,朗姆酒,幼砂糖,鲜草莓 甜度:二星（满五星） 最佳食用温度：5-7摄氏度',10,3),(175,'草莓冰淇淋','/picture/9-1.jpg','/picture/9-2.jpg','/picture/9-3.jpg',299,'甜郁草莓配合冰淇淋的丝滑口感,让清爽与浪漫在爱情果园激情碰撞,恋上草莓,这份心情,美妙非凡.\r\n主口味:草莓口味 主要原料:草莓果溶 草莓  甜度:三星（满五星） 最佳食用温度：-12至-15摄氏度',10,1),(176,'玫瑰舒芙蕾','/picture/10-1.jpg','/picture/10-2.jpg','/picture/10-3.jpg',28,'优选法国芝士,奶香浓郁,质地柔滑,口感细腻.法国芝士有助于提升糕点的整体口感,完美平衡酸度与甜味,制作出的糕点更加洁白纯美.',10,2),(177,'半熟芝士','/picture/11-1.jpg','/picture/11-1.jpg','/picture/11-1.jpg',38,'为了保证芝士的香醇,半熟芝士借鉴日本温泉煮鸡蛋的做法,把芝士,牛奶,鸡蛋,天然奶油,砂糖,小麦粉拌成面糊,通过水浴蒸烤,保证芝士蛋糕细嫩,柔软,留住芝士的香醇细滑.',10,2),(178,'青森芝士条','/picture/12-1.jpg','/picture/1-2.jpg','/picture/12-1.jpg',36,'青森芝士和风轻拂,,奶香浓郁,质地柔滑,口感细腻.',10,2);
-/*!40000 ALTER TABLE `goods` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `order`
---
-
+-- ----------------------------
+-- Table structure for order
+-- ----------------------------
 DROP TABLE IF EXISTS `order`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `order` (
+CREATE TABLE `order`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `total` float DEFAULT NULL,
-  `amount` int(6) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL,
-  `paytype` tinyint(1) DEFAULT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
-  `datetime` datetime DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_user_id_idx` (`user_id`),
+  `total` float NULL DEFAULT NULL,
+  `amount` int(6) NULL DEFAULT NULL,
+  `status` tinyint(1) NULL DEFAULT NULL,
+  `paytype` tinyint(1) NULL DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `datetime` datetime(0) NULL DEFAULT NULL,
+  `user_id` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_user_id_idx`(`user_id`) USING BTREE,
   CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `order`
---
+-- ----------------------------
+-- Records of order
+-- ----------------------------
+INSERT INTO `order` VALUES (6, 6.01, 1, 2, 1, '魏志林', '15848174313', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学东区宿舍', '2019-03-20 12:18:51', 6);
+INSERT INTO `order` VALUES (7, 6.01, 1, 2, 1, '魏志林', '15848174313', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学东区宿舍', '2019-03-20 13:55:59', 6);
+INSERT INTO `order` VALUES (18, 9, 3, 2, 1, '魏志林', '18245631746', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学', '2019-03-20 15:42:50', 25);
+INSERT INTO `order` VALUES (20, 19.8, 3, 3, 1, '魏志林', '18245631746', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学', '2019-03-20 15:44:49', 25);
+INSERT INTO `order` VALUES (21, 6, 2, 3, 1, '魏志林', '18245631746', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学', '2019-03-20 15:45:28', 25);
+INSERT INTO `order` VALUES (22, 9, 3, 3, 1, '魏志林', '18245631746', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学', '2019-03-20 15:45:56', 25);
 
-LOCK TABLES `order` WRITE;
-/*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (47,50.2,1,4,2,'魏志林','18245631746','内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学','2018-12-01 10:44:10',25);
-/*!40000 ALTER TABLE `order` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `orderitem`
---
-
+-- ----------------------------
+-- Table structure for orderitem
+-- ----------------------------
 DROP TABLE IF EXISTS `orderitem`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orderitem` (
+CREATE TABLE `orderitem`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `price` float DEFAULT NULL,
-  `amount` int(11) DEFAULT NULL,
-  `goods_id` int(11) DEFAULT NULL,
-  `order_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_order_id_idx` (`order_id`),
-  KEY `fk_orderitem_goods_id_idx` (`goods_id`),
+  `price` float NULL DEFAULT NULL,
+  `amount` int(11) NULL DEFAULT NULL,
+  `goods_id` int(11) NULL DEFAULT NULL,
+  `order_id` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_order_id_idx`(`order_id`) USING BTREE,
+  INDEX `fk_orderitem_goods_id_idx`(`goods_id`) USING BTREE,
   CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orderitem_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `orderitem`
---
+-- ----------------------------
+-- Records of orderitem
+-- ----------------------------
+INSERT INTO `orderitem` VALUES (6, 6.01, 1, 181, 6);
+INSERT INTO `orderitem` VALUES (7, 6.01, 1, 181, 7);
+INSERT INTO `orderitem` VALUES (12, 3, 3, 185, 18);
+INSERT INTO `orderitem` VALUES (14, 6.6, 3, 184, 20);
+INSERT INTO `orderitem` VALUES (15, 3, 2, 185, 21);
+INSERT INTO `orderitem` VALUES (16, 3, 3, 185, 22);
 
-LOCK TABLES `orderitem` WRITE;
-/*!40000 ALTER TABLE `orderitem` DISABLE KEYS */;
-INSERT INTO `orderitem` VALUES (43,50.2,1,1,47);
-/*!40000 ALTER TABLE `orderitem` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `recommend`
---
-
+-- ----------------------------
+-- Table structure for recommend
+-- ----------------------------
 DROP TABLE IF EXISTS `recommend`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `recommend` (
+CREATE TABLE `recommend`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `type` tinyint(1) DEFAULT NULL,
-  `goods_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_goods_id_idx` (`goods_id`),
+  `type` tinyint(1) NULL DEFAULT NULL,
+  `goods_id` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_goods_id_idx`(`goods_id`) USING BTREE,
   CONSTRAINT `fk_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `recommend`
---
+-- ----------------------------
+-- Records of recommend
+-- ----------------------------
+INSERT INTO `recommend` VALUES (29, 1, 181);
+INSERT INTO `recommend` VALUES (30, 2, 181);
+INSERT INTO `recommend` VALUES (31, 3, 181);
+INSERT INTO `recommend` VALUES (32, 2, 182);
+INSERT INTO `recommend` VALUES (36, 2, 184);
+INSERT INTO `recommend` VALUES (38, 2, 185);
+INSERT INTO `recommend` VALUES (40, 2, 186);
+INSERT INTO `recommend` VALUES (41, 3, 186);
 
-LOCK TABLES `recommend` WRITE;
-/*!40000 ALTER TABLE `recommend` DISABLE KEYS */;
-INSERT INTO `recommend` VALUES (2,2,2),(3,2,3),(4,2,4),(5,2,5),(6,2,6),(7,2,7),(8,2,8),(9,2,9),(10,3,10),(11,3,12),(12,3,13),(13,3,14),(14,3,15),(15,3,16),(16,3,17),(17,3,18),(18,3,19),(25,1,1),(26,2,1),(27,3,1);
-/*!40000 ALTER TABLE `recommend` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `type`
---
-
+-- ----------------------------
+-- Table structure for type
+-- ----------------------------
 DROP TABLE IF EXISTS `type`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `type` (
+CREATE TABLE `type`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `type`
---
+-- ----------------------------
+-- Records of type
+-- ----------------------------
+INSERT INTO `type` VALUES (1, '绿色水果');
+INSERT INTO `type` VALUES (2, '绿色蔬菜');
+INSERT INTO `type` VALUES (3, '绿色保健品');
 
-LOCK TABLES `type` WRITE;
-/*!40000 ALTER TABLE `type` DISABLE KEYS */;
-INSERT INTO `type` VALUES (1,'冰淇淋系列'),(2,'零食系列'),(3,'儿童系列'),(4,'法式系列'),(5,'经典系列'),(8,'节日系列'),(10,'恶搞系列');
-/*!40000 ALTER TABLE `type` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user`
---
-
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
 DROP TABLE IF EXISTS `user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
+CREATE TABLE `user`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
-  `isadmin` bit(1) DEFAULT NULL,
-  `isvalidate` bit(1) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `username` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `isadmin` bit(1) NULL DEFAULT NULL,
+  `isvalidate` bit(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `username_UNIQUE`(`username`) USING BTREE,
+  UNIQUE INDEX `email_UNIQUE`(`email`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `user`
---
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (6, 'admin', 'admin@sikiedu.com', 'admin', 'fz', '12312312313', '西安邮电大学', b'1', b'0');
+INSERT INTO `user` VALUES (24, '王磊', '0161122147@mail.imu.edu.cn', 'wl1997', '王磊', '12312313', '西安邮电大学长安校区', b'0', b'0');
+INSERT INTO `user` VALUES (25, '1', '1', '1', '魏志林', '18245631746', '内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学', NULL, NULL);
+INSERT INTO `user` VALUES (26, 'apitest', '123', '123', 'feizhen', '1234444', 'sadadsada', b'0', b'0');
+INSERT INTO `user` VALUES (35, 'zhengchang', '888', '777', 'feizhen', '123444', 'sadadsada', b'0', b'0');
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (6,'admin','admin@sikiedu.com','admin','魏志林','15848174313','内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学东区宿舍','','\0'),(24,'王磊','0161122147@mail.imu.edu.cn','wl1997','王磊','18245631746','内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学','\0','\0'),(25,'1','1','1','魏志林','18245631746','内蒙古自治区呼和浩特市赛罕区大学西路内蒙古大学',NULL,NULL),(26,'2','2','2',NULL,NULL,NULL,NULL,NULL),(27,'3','3','3',NULL,NULL,NULL,NULL,NULL),(28,'4','4','4',NULL,NULL,NULL,NULL,NULL),(29,'5','5','5',NULL,NULL,NULL,NULL,NULL),(30,'6','6','6',NULL,NULL,NULL,NULL,NULL),(31,'7','7',NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2018-12-03 12:14:30
+SET FOREIGN_KEY_CHECKS = 1;

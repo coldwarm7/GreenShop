@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 
-@WebServlet(name = "AppGoodsByIdServlet",urlPatterns = "/greenshop/app/goodsById")
+@WebServlet(name = "AppGoodsByIdServlet",urlPatterns = "/app/goodsById")
 public class AppGoodsByIdServlet extends HttpServlet {
     private GoodsService goodsService = new GoodsService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

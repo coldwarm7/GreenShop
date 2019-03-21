@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.InvocationTargetException;
 
-@WebServlet(name = "AppUserRegisterServlet" , urlPatterns = "/greenshop/app/user_register")
+@WebServlet(name = "AppUserRegisterServlet" , urlPatterns = "/app/user_register")
 public class AppUserRegisterServlet extends HttpServlet {
     private UserService uService = new UserService();
     private TypeService tService = new TypeService();

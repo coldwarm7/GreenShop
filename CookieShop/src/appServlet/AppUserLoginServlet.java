@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 
-@WebServlet(name = "AppUserLoginServlet",urlPatterns = "/greenshop/app/user_login")
+@WebServlet(name = "AppUserLoginServlet",urlPatterns = "/app/user_login")
 public class AppUserLoginServlet extends HttpServlet {
     private UserService uService = new UserService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

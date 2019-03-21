@@ -15,7 +15,7 @@ import java.util.Map;
 
 //热销或新品
 
-@WebServlet(name = "AppGoodsByKindServlet",urlPatterns = "/greenshop/app/goodsByKind")
+@WebServlet(name = "AppGoodsByKindServlet",urlPatterns = "/app/goodsByKind")
 public class AppGoodsByTypeServlet extends HttpServlet {
     private GoodsService goodsService = new GoodsService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

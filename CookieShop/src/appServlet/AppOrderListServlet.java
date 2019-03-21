@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
-@WebServlet(name = "AppOrderListServlet",urlPatterns = "/greenshop/app/orderList")
+@WebServlet(name = "AppOrderListServlet",urlPatterns = "/app/orderList")
 public class AppOrderListServlet extends HttpServlet {
     private OrderService oService = new OrderService();
 

@@ -16,7 +16,7 @@ import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "AppGoodsListServlet",urlPatterns = "/greenshop/app/goodsList")
+@WebServlet(name = "AppGoodsListServlet",urlPatterns = "/app/goodsList")
 public class AppGoodsListServlet extends HttpServlet {
     private GoodsService goodsService = new GoodsService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
