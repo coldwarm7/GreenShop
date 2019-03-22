@@ -38,14 +38,15 @@ public class AppUserRegisterServlet extends HttpServlet {
         }
         Msg msg = new Msg();
         if(uService.register(user)) {
-            msg.setResult(true);
+            msg.setCode(true);
             msg.setMsg("注册成功，请登录！");
+            msg.setData(user);
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
             out.write(registerJson.getBytes("UTF-8"));
             out.flush();
         }else {
-            msg.setResult(false);
+            msg.setCode(false);
             msg.setMsg("用户名或邮箱重复，请重新填写！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();

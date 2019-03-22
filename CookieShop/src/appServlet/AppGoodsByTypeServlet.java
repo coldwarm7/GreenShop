@@ -1,6 +1,7 @@
 package appServlet;
 
 import com.alibaba.fastjson.JSON;
+import model.Msg;
 import service.GoodsService;
 
 import javax.servlet.ServletException;
@@ -27,7 +28,18 @@ public class AppGoodsByTypeServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         int typeId = Integer.parseInt(request.getParameter("kindId"));
         List<Map<String,Object>> list = goodsService.getGoodsList(typeId);
-        String registerJson = JSON.toJSONString(list);
+
+        Msg msg = new Msg();
+        msg.setData(list);
+        msg.setCode(true);
+        if (typeId == 1){
+            msg.setMsg("成功查询首推商品");
+        }else if (typeId == 2){
+            msg.setMsg("成功查询热销商品");
+        }else if (typeId == 3){
+            msg.setMsg("成功查询新品");
+        }
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();

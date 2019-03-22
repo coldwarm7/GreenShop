@@ -26,14 +26,17 @@ public class AppUserLoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         User user = uService.login(ue, password);
         if(user==null) {
-            msg.setResult(false);
+            msg.setCode(false);
             msg.setMsg("用户名、邮箱或者密码错误，请重新登录！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
             out.write(registerJson.getBytes("UTF-8"));
             out.flush();
         }else {
-            String registerJson = JSON.toJSONString(user);
+            msg.setData(user);
+            msg.setMsg("登陆成功");
+            msg.setCode(true);
+            String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
             out.write(registerJson.getBytes("UTF-8"));
             out.flush();

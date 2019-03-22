@@ -2,6 +2,7 @@ package appServlet;
 
 import com.alibaba.fastjson.JSON;
 import model.Goods;
+import model.Msg;
 import model.User;
 import net.sf.json.JSONObject;
 import service.GoodsService;
@@ -30,7 +31,15 @@ public class AppGoodsListServlet extends HttpServlet {
         response.setContentType("application/json; charset=utf-8");
         response.setCharacterEncoding("UTF-8");
 
-        String registerJson = JSON.toJSONString(goods);
+        Msg msg = new Msg();
+        msg.setData(goods);
+        msg.setCode(true);
+        if (typeId == 0){
+            msg.setMsg("成功查询所有商品");
+        }else {
+            msg.setMsg("成功按照分类查找商品");
+        }
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();

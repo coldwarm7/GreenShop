@@ -1,6 +1,7 @@
 package appServlet;
 
 import com.alibaba.fastjson.JSON;
+import model.Msg;
 import model.Type;
 import service.TypeService;
 
@@ -24,7 +25,10 @@ public class AppGoodsTypeServlet extends HttpServlet {
         List<Type> list= tService.GetAllType();
         response.setContentType("application/json; charset=utf-8");
         response.setCharacterEncoding("UTF-8");
-        String userJson = JSON.toJSONString(list);
+
+        Msg msg = new Msg(true,"查询类型成功",list);
+
+        String userJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(userJson.getBytes("UTF-8"));
         out.flush();

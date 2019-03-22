@@ -2,6 +2,7 @@ package appServlet;
 
 import com.alibaba.fastjson.JSON;
 import model.Goods;
+import model.Msg;
 import service.GoodsService;
 
 import javax.servlet.ServletException;
@@ -26,7 +27,8 @@ public class AppGoodsByIdServlet extends HttpServlet {
         int goods_id = Integer.parseInt(request.getParameter("goods_id"));
         Goods g = goodsService.getGoodsById(goods_id);
 
-        String registerJson = JSON.toJSONString(g);
+        Msg msg = new Msg(true,"根据id查询商品成功",g);
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();

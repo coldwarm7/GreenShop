@@ -1,6 +1,7 @@
 package appServlet;
 
 import com.alibaba.fastjson.JSON;
+import model.Msg;
 import model.Order;
 import model.Type;
 import model.User;
@@ -31,7 +32,8 @@ public class AppOrderListServlet extends HttpServlet {
 
         List<Order> list = oService.selectAll(id);
 
-        String registerJson = JSON.toJSONString(list);
+        Msg msg = new Msg(true,"成功查询用户相关订单列表",list);
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();

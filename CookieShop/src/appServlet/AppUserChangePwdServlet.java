@@ -29,7 +29,7 @@ public class AppUserChangePwdServlet extends HttpServlet {
         if (u != null){
             u.setPassword(newPwd);
             uService.updatePwd(u);
-            msg.setResult(true);
+            msg.setCode(true);
             msg.setMsg("修改成功！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
@@ -37,7 +37,7 @@ public class AppUserChangePwdServlet extends HttpServlet {
             out.flush();
 
         }else {
-            msg.setResult(false);
+            msg.setCode(false);
             msg.setMsg("修改失败，原密码不正确，你再想想！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();

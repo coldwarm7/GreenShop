@@ -2,6 +2,7 @@ package appServlet;
 
 
 import com.alibaba.fastjson.JSON;
+import model.Msg;
 import model.User;
 import net.sf.json.JSONObject;
 import service.UserService;
@@ -26,7 +27,9 @@ public class AppChangeAddressServlet extends HttpServlet {
         User loginUser = (User) JSONObject.toBean(json,User.class);
         uService.updateUserAddress(loginUser);
         loginUser = uService.selectById(loginUser.getId());
-        String registerJson = JSON.toJSONString(loginUser);
+
+        Msg msg = new Msg(true,"修改用户地址成功",loginUser);
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();

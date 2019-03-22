@@ -2,6 +2,7 @@ package appServlet;
 
 import com.alibaba.fastjson.JSON;
 import model.Goods;
+import model.Msg;
 import service.GoodsService;
 
 import javax.servlet.ServletException;
@@ -26,7 +27,8 @@ public class AppGoodsSearchServlet extends HttpServlet {
         String keywords = request.getParameter("keyword");
         List<Goods> list = goodsService.getSearchGoods(keywords);
 
-        String registerJson = JSON.toJSONString(list);
+        Msg msg = new Msg(true,"成功进行模糊查询",list);
+        String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
         out.flush();
