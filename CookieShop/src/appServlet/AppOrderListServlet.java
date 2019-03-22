@@ -32,7 +32,16 @@ public class AppOrderListServlet extends HttpServlet {
 
         List<Order> list = oService.selectAll(id);
 
-        Msg msg = new Msg(true,"成功查询用户相关订单列表",list);
+        Msg msg = new Msg();
+        if (list.size() == 0){
+            msg.setData(list);
+            msg.setCode(false);
+            msg.setMsg("所查询的用户id不存在");
+        }else {
+            msg.setMsg("成功查询用户相关订单列表");
+            msg.setCode(true);
+            msg.setData(list);
+        }
         String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));

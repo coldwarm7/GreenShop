@@ -27,7 +27,16 @@ public class AppGoodsSearchServlet extends HttpServlet {
         String keywords = request.getParameter("keyword");
         List<Goods> list = goodsService.getSearchGoods(keywords);
 
-        Msg msg = new Msg(true,"成功进行模糊查询",list);
+        Msg msg = new Msg();
+        if (list.size() == 0){
+            msg.setData(list);
+            msg.setCode(false);
+            msg.setMsg("所查询的商品不存在");
+        }else {
+            msg.setMsg("成功进行模糊查询");
+            msg.setCode(true);
+            msg.setData(list);
+        }
         String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));

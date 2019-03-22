@@ -27,7 +27,16 @@ public class AppGoodsByIdServlet extends HttpServlet {
         int goods_id = Integer.parseInt(request.getParameter("goods_id"));
         Goods g = goodsService.getGoodsById(goods_id);
 
-        Msg msg = new Msg(true,"根据id查询商品成功",g);
+        Msg msg = new Msg();
+        if (g == null){
+            msg.setData(g);
+            msg.setCode(false);
+            msg.setMsg("所查询的商品不存在");
+        }else {
+            msg.setMsg("根据id查询商品成功");
+            msg.setCode(true);
+            msg.setData(g);
+        }
         String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));
