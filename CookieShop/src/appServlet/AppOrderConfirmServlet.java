@@ -17,10 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @WebServlet(name = "AppOrderConfirmServlet",urlPatterns = "/app/order_confirm")
 public class AppOrderConfirmServlet extends HttpServlet {
@@ -59,7 +56,8 @@ public class AppOrderConfirmServlet extends HttpServlet {
             if (goodsService.getGoodsById(orderItem.getGoods_id()) == null || goodsService.getGoodsById(orderItem.getGoods_id()).getStock() <= 0){
                 msg.setMsg("商品不存在，订单创建失败");
                 msg.setCode(false);
-                msg.setData(null);
+                List<User> users = new ArrayList<>();
+                msg.setData(users);
                 String registerJson = JSON.toJSONString(msg);
                 OutputStream out = response.getOutputStream();
                 out.write(registerJson.getBytes("UTF-8"));
@@ -77,7 +75,8 @@ public class AppOrderConfirmServlet extends HttpServlet {
 
         msg.setCode(true);
         msg.setMsg("订单支付成功！");
-        msg.setData(null);
+        List<User> users = new ArrayList<>();
+        msg.setData(users);
         String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));

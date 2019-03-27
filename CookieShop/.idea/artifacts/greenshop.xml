@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="greenshop">
+  <artifact type="war" build-on-make="true" name="greenshop">
     <output-path>$PROJECT_DIR$/out/artifacts/greenshop</output-path>
     <root id="archive" name="greenshop.war">
       <element id="artifact" artifact-name="GreenShop:war exploded" />

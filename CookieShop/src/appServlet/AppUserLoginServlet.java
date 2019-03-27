@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "AppUserLoginServlet",urlPatterns = "/app/user_login")
 public class AppUserLoginServlet extends HttpServlet {
@@ -33,7 +35,9 @@ public class AppUserLoginServlet extends HttpServlet {
             out.write(registerJson.getBytes("UTF-8"));
             out.flush();
         }else {
-            msg.setData(user);
+            List<User> users = new ArrayList<>();
+            users.add(user);
+            msg.setData(users);
             msg.setMsg("登陆成功");
             msg.setCode(true);
             String registerJson = JSON.toJSONString(msg);

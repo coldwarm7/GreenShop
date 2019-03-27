@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "AppChangeAddressServlet",urlPatterns = "/app/user_changeaddress")
 public class AppChangeAddressServlet extends HttpServlet {
@@ -27,8 +29,10 @@ public class AppChangeAddressServlet extends HttpServlet {
         User loginUser = (User) JSONObject.toBean(json,User.class);
         uService.updateUserAddress(loginUser);
         loginUser = uService.selectById(loginUser.getId());
+        List<User> users = new ArrayList<>();
+        users.add(loginUser);
 
-        Msg msg = new Msg(true,"修改用户地址成功",loginUser);
+        Msg msg = new Msg(true,"修改用户地址成功",users);
         String registerJson = JSON.toJSONString(msg);
         OutputStream out = response.getOutputStream();
         out.write(registerJson.getBytes("UTF-8"));

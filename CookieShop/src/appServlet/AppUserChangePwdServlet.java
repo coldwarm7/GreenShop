@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "AppUserChangePwdServlet",urlPatterns = "/app/user_changepwd")
 public class AppUserChangePwdServlet extends HttpServlet {
@@ -31,6 +33,9 @@ public class AppUserChangePwdServlet extends HttpServlet {
             uService.updatePwd(u);
             msg.setCode(true);
             msg.setMsg("修改成功！");
+
+            List<User> users = new ArrayList<>();
+            msg.setData(users);
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
             out.write(registerJson.getBytes("UTF-8"));
@@ -38,6 +43,8 @@ public class AppUserChangePwdServlet extends HttpServlet {
 
         }else {
             msg.setCode(false);
+            List<User> users = new ArrayList<>();
+            msg.setData(users);
             msg.setMsg("修改失败，原密码不正确，你再想想！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
