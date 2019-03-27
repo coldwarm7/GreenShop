@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "AppUserRegisterServlet" , urlPatterns = "/app/user_register")
 public class AppUserRegisterServlet extends HttpServlet {
@@ -47,6 +49,8 @@ public class AppUserRegisterServlet extends HttpServlet {
             out.flush();
         }else {
             msg.setCode(false);
+            List<User> users = new ArrayList<>();
+            msg.setData(users);
             msg.setMsg("用户名或邮箱重复，请重新填写！");
             String registerJson = JSON.toJSONString(msg);
             OutputStream out = response.getOutputStream();
