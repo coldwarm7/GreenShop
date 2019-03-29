@@ -33,6 +33,11 @@ public class OrderDao {
         String sql = "select * from `order` where user_id=? order by datetime desc";
         return r.query(sql, new BeanListHandler<Order>(Order.class),userid);
     }
+    public List<Order> selectAll(int userid,int status) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from `order` where user_id=? and status=? order by datetime desc";
+        return r.query(sql, new BeanListHandler<Order>(Order.class),userid,status);
+    }
     public List<OrderItem> selectAllItem(int orderid) throws SQLException{
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "select i.id,i.price,i.amount,g.name from orderitem i,goods g where order_id=? and i.goods_id=g.id";

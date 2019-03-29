@@ -49,6 +49,20 @@ public class OrderService {
         }
         return list;
     }
+    public List<Order> selectAll(int userid,int status){
+        List<Order> list=null;
+        try {
+            list = oDao.selectAll(userid,status);
+            for(Order o :list) {
+                List<OrderItem> l = oDao.selectAllItem(o.getId());
+                o.setItemList(l);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return list;
+    }
     public Page getOrderPage(int status,int pageNumber) {
         Page p = new Page();
         p.setPageNumber(pageNumber);
