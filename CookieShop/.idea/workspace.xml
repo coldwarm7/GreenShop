@@ -7,103 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3847e6c7-9242-49bb-ad13-6faff34ce164" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreenShop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/GreenShop_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppChangeAddressServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppGoodsByIdServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppGoodsByTypeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppGoodsListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppGoodsSearchServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppGoodsTypeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppOrderConfirmServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppOrderDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppOrderListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppOrderListSimpleServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppOrderStatusServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppUserChangePwdServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppUserLoginServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/AppUserRegisterServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/JsonReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appServlet/JsonServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c3p0-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/GoodsDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/OrderDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/TypeDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filter/AdminFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filter/EncodeFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listener/ApplicationListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Goods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Msg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/OrderItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/OrderJson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/OrderJsonNew.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Recommend.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/GoodsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TypeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsAddServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsEditServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsEditshowServelt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminGoodsRecommendServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminOrderDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminOrderListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminOrderStatusServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminTypeAddServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminTypeDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminTypeEditServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminTypeListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserAddServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserEditServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserEditshowServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/AdminUserResetServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodRecommendListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsBuyServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsDeleteServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsDetailServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsLessenServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/GoodsSearchServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/IndexServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/OrderConfirmServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/OrderListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/OrderSubmitServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserCenterServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserChangeAddressServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserChangePwd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserGoodsCartServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserLoginServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserLogoutServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserRegisterServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DBUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/PriceUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/c3p0-config.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -119,53 +23,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppOrderStatusServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/AdminTypeListServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="247">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin/type_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/TypeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/TypeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/AdminGoodsAddServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppChangeAddressServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1327">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsListServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="456">
+              <caret line="58" column="82" selection-start-line="58" selection-start-column="82" selection-end-line="58" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -192,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsByIdServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="342">
               <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
             </state>
           </provider>
@@ -201,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-940">
+            <state relative-caret-position="76">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -213,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppUserChangePwdServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="95">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -363,6 +260,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,21 +270,101 @@
             </path>
             <path>
               <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="appServlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CookieShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CookieShop" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555859386132" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../chat_server" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555859729823" />
+    <property name="last_opened_file_path" value="D:/苏杨帆/Windows_tts_online1226_5cc16fa7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15527344" />
@@ -596,12 +574,15 @@
       <workItem from="1554724317966" duration="641000" />
       <workItem from="1555406306603" duration="2213000" />
       <workItem from="1555483036883" duration="1281000" />
-      <workItem from="1555856734321" duration="2469000" />
+      <workItem from="1555856734321" duration="3022000" />
+      <workItem from="1555998690304" duration="443000" />
+      <workItem from="1556159160326" duration="616000" />
+      <workItem from="1556190218180" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218411000" />
+    <option name="totallyTimeSpent" value="220640000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,23 +596,23 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8250825" visible="true" weight="0.2238806" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8221258" visible="true" weight="0.23081024" />
       <window_info id="Structure" order="1" sideWeight="0.49915683" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.17177097" side_tool="true" weight="0.16257995" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.17491749" side_tool="true" visible="true" weight="0.2238806" />
+      <window_info id="Web" order="7" sideWeight="0.1778742" side_tool="true" visible="true" weight="0.23081024" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722221" visible="true" weight="0.34273317" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722221" weight="0.34273317" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37310195" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32946146" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.24186552" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.05206074" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50277776" side_tool="true" weight="0.328877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.318872" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329718" />
@@ -686,41 +667,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppOrderDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/user_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="116" selection-start-line="12" selection-start-column="116" selection-end-line="12" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/goods_cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsByTypeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -902,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/AdminGoodsAddServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="88" column="51" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppOrderListSimpleServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -967,6 +906,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://MAVEN/groupId:GreenShop:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>groupId:GreenShop:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">groupId:GreenShop:1.0-SNAPSHOT</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="358.0" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/JsonServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppChangeAddressServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/AdminTypeListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/type_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TypeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/TypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -982,9 +1006,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsByIdServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-940">
+        <state relative-caret-position="76">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -992,66 +1023,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://MAVEN/groupId:GreenShop:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>groupId:GreenShop:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="" y="">groupId:GreenShop:1.0-SNAPSHOT</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="358.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppUserChangePwdServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="95">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/AdminGoodsAddServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppChangeAddressServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1327">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/appServlet/AppGoodsByIdServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="456">
+          <caret line="58" column="82" selection-start-line="58" selection-start-column="82" selection-end-line="58" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -1061,7 +1043,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>greenshop</last-edited>
+          <last-edited>GreenShop:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1074,7 +1056,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (GreenShop)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1133,7 +1115,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>c3p0-0.9.5.2</last-edited>
+          <last-edited>mysql-connector-java-8.0.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
